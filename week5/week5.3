@@ -1,0 +1,13 @@
+Write a python to read a sentence and print its longest word and its length
+
+For example:
+Input	Result
+This is a sample text to test
+sample
+6
+Answer:(penalty regime: 0 %)
+sentence = input()
+words = sentence.split()
+longest_word = max(words, key=len)
+print(longest_word)
+print(len(longest_word))
