@@ -1,0 +1,34 @@
+Given two Strings s1 and s2, remove all the characters from s1 which is present in s2.
+ 
+Constraints
+ 
+1<= string length <= 200
+ 
+Sample Input 1
+ 
+experience
+enc
+ 
+Sample Output 1
+ 
+xpri
+Answer:(penalty regime: 0 %)
+def remove_dirty_chars(s1, s2):
+    count = [0] * 256
+    for char in s2:
+        count[ord(char)] += 1
+    ip_idx, res = 0, ""
+
+    while ip_idx < len(s1):
+        temp = s1[ip_idx]
+        if count[ord(temp)] == 0:
+            res += temp
+        ip_idx += 1
+
+    return res
+
+
+sample_input1 = input()
+sample_input2 = input()
+result = remove_dirty_chars(sample_input1, sample_input2)
+print(result) 
