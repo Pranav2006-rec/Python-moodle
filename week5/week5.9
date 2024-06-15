@@ -1,0 +1,26 @@
+Write a python program to count all letters, digits, and special symbols respectively from a given string
+
+For example:
+Input	Result
+rec@123
+3
+3
+1
+Answer:(penalty regime: 0 %)
+def count_characters(s):
+    alphabets = digits = special = 0
+    for char in s:
+        if char.isalpha():
+            alphabets += 1
+        elif char.isdigit():
+            digits += 1
+        else:
+            special += 1
+    return alphabets, digits, special
+
+input_string = input()
+alphabets_count, digits_count, special_count = count_characters(input_string)
+print( alphabets_count)
+print( digits_count)
+print(special_count)
+
