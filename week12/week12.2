@@ -1,0 +1,17 @@
+Given an integer n, print true if it is a power of three. Otherwise, print false.
+An integer n is a power of three, if there exists an integer x such that n == 3x.
+For example:
+Input	Result
+27
+True
+0
+False
+n = int(input())
+
+if n <= 0:
+    print(False)
+else:
+    while n % 3 == 0:
+        n //= 3
+    print(n == 1)
+
